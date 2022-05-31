@@ -1,0 +1,91 @@
+@import url(../styles/reset.css);
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*/
+
+body {
+  max-height: 100%;
+  background-color: #fff;
+
+  font-family: "Roboto", sans-serif;
+
+  padding: 10px;
+}
+
+.titulo {
+  margin: 10px;
+  border: none !important;
+}
+.container * {
+  border: 1px solid rgb(0, 0, 0);
+  position: relative;
+}
+.container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.6fr 0.7fr;
+  grid-template-rows: 0.6fr 2.2fr 0.2fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    "Nav Div Aside"
+    "Footer Footer Footer";
+}
+
+.Header {
+  grid-area: Header;
+}
+
+.Footer {
+  grid-area: Footer;
+}
+
+.Nav {
+  grid-area: Nav;
+}
+
+.Div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Div Div Div"
+    "Article Article Article"
+    "Article2 Article2 Article2"
+    "Article3 Article3 Article3";
+  grid-area: Div;
+
+  padding: 10px;
+}
+
+.Article {
+  display: flex;
+  justify-content: end;
+  grid-area: Article;
+}
+
+.Article2 {
+  display: flex;
+  justify-content: end;
+  grid-area: Article2;
+}
+
+.Article3 {
+  display: flex;
+  justify-content: end;
+  grid-area: Article3;
+}
+
+.Aside {
+  display: flex;
+  justify-content: end;
+  grid-area: Aside;
+}
+
+html,
+body,
+.container {
+  height: 98.93%;
+  margin: 0;
+}

@@ -1,0 +1,100 @@
+@import url(../styles/reset.css);
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*/
+
+body {
+  max-height: 100%;
+  background-color: #fff;
+
+  font-family: "Roboto", sans-serif;
+
+  padding: 10px;
+}
+
+.titulo {
+  margin: 10px;
+  border: none !important;
+}
+.container * {
+  border: 1px solid rgb(0, 0, 0);
+  position: relative;
+}
+.container {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  grid-template-rows: 0.7fr 2.1fr 0.2fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    "Section Section Section"
+    "Footer Footer Footer";
+}
+
+.Footer {
+  grid-area: Footer;
+}
+
+.Section {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  grid-template-rows: 0.2fr 0.4fr 2.1fr 0.5fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Section Section Section"
+    "Header2 Header2 Article"
+    "Article2 Article2 Article"
+    "Footer2 Footer2 Article";
+  grid-area: Section;
+
+  padding: 10px;
+}
+
+.Article {
+  grid-area: Article;
+}
+
+.Header2 {
+  display: flex;
+  justify-content: end;
+  grid-area: Header2;
+}
+
+.Article2 {
+  display: flex;
+  justify-content: end;
+  grid-area: Article2;
+}
+
+.Footer2 {
+  display: flex;
+  justify-content: end;
+  grid-area: Footer2;
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . Nav"
+    ". . ."
+    ". . .";
+  grid-area: Header;
+
+  padding: 10px;
+}
+
+.Nav {
+  grid-area: Nav;
+}
+
+html,
+body,
+.container {
+  height: 98.93%;
+  margin: 0;
+}

@@ -1,0 +1,89 @@
+@import url(../styles/reset.css);
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*/
+
+body {
+  max-height: 100%;
+  background-color: #fff;
+
+  font-family: "Roboto", sans-serif;
+
+  padding: 10px;
+}
+
+.titulo {
+  margin: 10px;
+  border: none !important;
+}
+.container * {
+  border: 1px solid rgb(0, 0, 0);
+  position: relative;
+}
+.container {
+  display: grid;
+  grid-template-columns: 0.6fr 1.9fr 0.6fr;
+  grid-template-rows: 0.7fr 2.1fr 0.2fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    "Nav Section Aside"
+    "Footer Footer Footer";
+}
+
+.Section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.5fr 1.9fr 0.6fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Section Section Section"
+    "Header2 Header2 Header2"
+    "Article Article Article"
+    "Footer2 Footer2 Footer2";
+  grid-area: Section;
+
+  padding: 10px;
+}
+
+.Header2 {
+  display: flex;
+  justify-content: end;
+  grid-area: Header2;
+}
+
+.Article {
+  display: flex;
+  justify-content: end;
+  grid-area: Article;
+}
+
+.Footer2 {
+  display: flex;
+  justify-content: end;
+  grid-area: Footer2;
+}
+
+.Header {
+  grid-area: Header;
+}
+
+.Nav {
+  grid-area: Nav;
+}
+
+.Aside {
+  grid-area: Aside;
+}
+
+.Footer {
+  grid-area: Footer;
+}
+
+html,
+body,
+.container {
+  height: 98.93%;
+  margin: 0;
+}
